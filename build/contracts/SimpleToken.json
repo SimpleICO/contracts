@@ -1,0 +1,575 @@
+{
+  "contractName": "SimpleToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_subtractedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "decreaseApproval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_addedValue",
+          "type": "uint256"
+        }
+      ],
+      "name": "increaseApproval",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.21;\n\nimport '../node_modules/openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';\nimport '../node_modules/openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol';\n\ncontract SimpleToken is StandardToken, DetailedERC20 {\n\n    constructor () {}\n    \n}",
+  "sourcePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/contracts/simpletoken.sol",
+  "ast": {
+    "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/contracts/simpletoken.sol",
+    "exportedSymbols": {
+      "SimpleToken": [
+        12
+      ]
+    },
+    "id": 13,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/node_modules/openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol",
+        "file": "../node_modules/openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 13,
+        "sourceUnit": 558,
+        "src": "26:87:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/node_modules/openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol",
+        "file": "../node_modules/openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 13,
+        "sourceUnit": 237,
+        "src": "114:87:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "StandardToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 557,
+              "src": "227:13:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StandardToken_$557",
+                "typeString": "contract StandardToken"
+              }
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "227:13:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "DetailedERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 236,
+              "src": "242:13:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DetailedERC20_$236",
+                "typeString": "contract DetailedERC20"
+              }
+            },
+            "id": 7,
+            "nodeType": "InheritanceSpecifier",
+            "src": "242:13:0"
+          }
+        ],
+        "contractDependencies": [
+          202,
+          236,
+          279,
+          311,
+          557
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 12,
+        "linearizedBaseContracts": [
+          12,
+          236,
+          557,
+          202,
+          279,
+          311
+        ],
+        "name": "SimpleToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 10,
+              "nodeType": "Block",
+              "src": "278:2:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 11,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "275:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "278:0:0"
+            },
+            "scope": 12,
+            "src": "263:17:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13,
+        "src": "203:84:0"
+      }
+    ],
+    "src": "0:287:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/contracts/simpletoken.sol",
+    "exportedSymbols": {
+      "SimpleToken": [
+        12
+      ]
+    },
+    "id": 13,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/node_modules/openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol",
+        "file": "../node_modules/openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 13,
+        "sourceUnit": 558,
+        "src": "26:87:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/node_modules/openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol",
+        "file": "../node_modules/openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 13,
+        "sourceUnit": 237,
+        "src": "114:87:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 4,
+              "name": "StandardToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 557,
+              "src": "227:13:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_StandardToken_$557",
+                "typeString": "contract StandardToken"
+              }
+            },
+            "id": 5,
+            "nodeType": "InheritanceSpecifier",
+            "src": "227:13:0"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6,
+              "name": "DetailedERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 236,
+              "src": "242:13:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DetailedERC20_$236",
+                "typeString": "contract DetailedERC20"
+              }
+            },
+            "id": 7,
+            "nodeType": "InheritanceSpecifier",
+            "src": "242:13:0"
+          }
+        ],
+        "contractDependencies": [
+          202,
+          236,
+          279,
+          311,
+          557
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 12,
+        "linearizedBaseContracts": [
+          12,
+          236,
+          557,
+          202,
+          279,
+          311
+        ],
+        "name": "SimpleToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 10,
+              "nodeType": "Block",
+              "src": "278:2:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 11,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "275:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 9,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "278:0:0"
+            },
+            "scope": 12,
+            "src": "263:17:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 13,
+        "src": "203:84:0"
+      }
+    ],
+    "src": "0:287:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-08T15:06:11.418Z"
+}

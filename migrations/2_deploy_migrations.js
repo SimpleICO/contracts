@@ -1,7 +1,7 @@
-var SimpleToken = artifacts.require("../contracts/simpletoken.v1.sol");
-var SimpleCrowdsale = artifacts.require("../contracts/simplecrowdsale.v1.sol");
+// var SimpleToken = artifacts.require("../contracts/simpletoken.sol");
+// var SimpleCrowdsale = artifacts.require("../contracts/simplecrowdsale.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(SimpleToken);
-  deployer.deploy(SimpleCrowdsale);
+  // deployer.deploy(SimpleToken, 'My SimpleToken', 'MST', 0);
+  // deployer.deploy(SimpleCrowdsale, 'My SimpleToken', 'MST', 0, 1);
 }
