@@ -1,4 +1,5 @@
 import ether from 'openzeppelin-solidity/test/helpers/ether';
+// import decodeLogs from 'openzeppelin-solidity/test/helpers/decodeLogs';
 import EVMRevert from 'openzeppelin-solidity/test/helpers/EVMRevert';
 import axios from 'axios';
 
@@ -23,9 +24,9 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
     const RATE = 1;
     const TOKEN_SUPPLY = ether('50');
     const TOKEN_USD_PRICE = 1.00;
-    const TOKEN_ETH_PRICE = ether('0.5');
+    const TOKEN_ETH_PRICE = ether('1');
     const MAX_USD_CAP = 100.00;
-    const INVESTMENT = ether('0.5');
+    const INVESTMENT = ether('5.75');
 
     async function convertCurrency(currency, to, amount){
         return axios
@@ -94,6 +95,11 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
             } else {
                 await this.crowdsale.buyTokens(investor, { value: investment, from: investor }).should.be.fulfilled;
             }
+
+            console.log(this.crowdsale.transactionHash);
+            const receipt = web3.eth.getTransactionReceipt(this.crowdsale.transactionHash);
+            // const logs = decodeLogs(receipt.logs, SimpleCrowdsale, this.crowdsale.address);
+            // console.log(logs);
 
             let weiRaised = await this.crowdsale.weiRaised();
             let weiRaisedInEth = web3.fromWei(weiRaised, 'ether');
