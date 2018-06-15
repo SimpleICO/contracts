@@ -14,7 +14,7 @@ contract SimpleCrowdsale is Crowdsale {
     constructor (uint256 _price, uint256 _rate, address _wallet, SimpleToken _token)
         public Crowdsale(_rate, _wallet, _token) {
 
-            price = _price;
+        price = _price;
 
     }
 
@@ -81,7 +81,7 @@ contract SimpleCrowdsale is Crowdsale {
        * @return Number of tokens that can be purchased with the specified _weiAmount
    */
     function _getTokenAmount(uint256 _weiAmount) internal view returns (uint256) {
-       return _weiAmount.div(price).mul(rate);
+        return _weiAmount.div(price).mul(1 ether);
     }
 
     /**

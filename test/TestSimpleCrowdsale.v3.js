@@ -24,7 +24,7 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
     const RATE = 1;
     const TOKEN_SUPPLY = 100;
     const TOKEN_ETH_PRICE = ether('0.001');
-    const INVESTMENT = ether('0.1');
+    const INVESTMENT = ether('0.0025');
 
     async function convertCurrency(currency, to, amount){
         return axios
@@ -32,9 +32,9 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
     }
 
     before(async function () {
-        console.log(`TOKEN SUPPLY ${TOKEN_SUPPLY}`); 
-        console.log(`TOKEN PRICE ${TOKEN_ETH_PRICE}`);
-        console.log(`TOKENS PER PRICE ${RATE}`);
+        console.log(`TOKEN PRICE WEI: ${TOKEN_ETH_PRICE}`);
+        console.log(`TOKEN PRICE ETH: ${web3.fromWei(TOKEN_ETH_PRICE)}`);
+        console.log(`TOKENS PER PRICE ${web3.fromWei(1e18)}`);
 
         let walletBalance = await web3.eth.getBalance(wallet);
         let investorBalance = await web3.eth.getBalance(investor);
@@ -43,7 +43,10 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
 
         this.token = await SimpleToken.new(NAME, SYMBOL, DECIMALS, TOKEN_SUPPLY, { from: wallet });
         this.crowdsale = await SimpleCrowdsale.new(TOKEN_ETH_PRICE, RATE, wallet, this.token.address, { from: wallet });
-        await this.token.transfer(this.crowdsale.address, TOKEN_SUPPLY);
+
+        const totalSupply = await this.token.totalSupply();
+
+        await this.token.transfer(this.crowdsale.address, totalSupply);
     });
 
     // beforeEach(async function () {
@@ -68,6 +71,8 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
         it('should create ERC20 token with correct parameters', async function () {
             const name = await this.token.name();
             const totalSupply = await this.token.totalSupply();
+
+            console.log(`TOKEN SUPPLY ${totalSupply.valueOf()}`); 
 
             console.log(name, totalSupply.valueOf());
         });

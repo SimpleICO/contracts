@@ -11,9 +11,11 @@ contract SimpleToken is StandardToken, DetailedERC20 {
         uint8 _decimals,
         uint256 _totalSupply) public DetailedERC20 (_name, _symbol, _decimals) {
 
-        totalSupply_ = _totalSupply;
-        balances[msg.sender] = _totalSupply;
-        emit Transfer(0x0, msg.sender, _totalSupply);
+        uint256 supply = _totalSupply * 1 ether;
+
+        totalSupply_ = supply;
+        balances[msg.sender] = supply;
+        emit Transfer(0x0, msg.sender, supply);
 
     }
 

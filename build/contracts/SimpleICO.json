@@ -101,14 +101,14 @@
     "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/contracts/simpleico.sol",
     "exportedSymbols": {
       "SimpleICO": [
-        338
+        344
       ]
     },
-    "id": 339,
+    "id": 345,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 287,
+        "id": 293,
         "literals": [
           "solidity",
           "^",
@@ -124,19 +124,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 338,
+        "id": 344,
         "linearizedBaseContracts": [
-          338
+          344
         ],
         "name": "SimpleICO",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 290,
+            "id": 296,
             "name": "crowdsales",
             "nodeType": "VariableDeclaration",
-            "scope": 338,
+            "scope": 344,
             "src": "52:27:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -146,7 +146,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 288,
+                "id": 294,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "52:7:3",
@@ -155,7 +155,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 289,
+              "id": 295,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "52:9:3",
@@ -169,10 +169,10 @@
           },
           {
             "constant": false,
-            "id": 295,
+            "id": 301,
             "name": "crowdsalesByAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 338,
+            "scope": 344,
             "src": "86:57:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -181,9 +181,9 @@
               "typeString": "mapping(address => address[])"
             },
             "typeName": {
-              "id": 294,
+              "id": 300,
               "keyType": {
-                "id": 291,
+                "id": 297,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "95:7:3",
@@ -200,7 +200,7 @@
               },
               "valueType": {
                 "baseType": {
-                  "id": 292,
+                  "id": 298,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "106:7:3",
@@ -209,7 +209,7 @@
                     "typeString": "address"
                   }
                 },
-                "id": 293,
+                "id": 299,
                 "length": null,
                 "nodeType": "ArrayTypeName",
                 "src": "106:9:3",
@@ -224,7 +224,7 @@
           },
           {
             "body": {
-              "id": 314,
+              "id": 320,
               "nodeType": "Block",
               "src": "199:112:3",
               "statements": [
@@ -234,11 +234,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 303,
+                        "id": 309,
                         "name": "_crowdsale",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 297,
+                        "referencedDeclaration": 303,
                         "src": "234:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -255,18 +255,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 300,
+                        "id": 306,
                         "name": "crowdsales",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 290,
+                        "referencedDeclaration": 296,
                         "src": "218:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 302,
+                      "id": 308,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -280,7 +280,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 304,
+                    "id": 310,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -294,7 +294,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 305,
+                  "id": 311,
                   "nodeType": "ExpressionStatement",
                   "src": "218:27:3"
                 },
@@ -304,11 +304,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 311,
+                        "id": 317,
                         "name": "_crowdsale",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 297,
+                        "referencedDeclaration": 303,
                         "src": "293:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -327,34 +327,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 306,
+                          "id": 312,
                           "name": "crowdsalesByAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 295,
+                          "referencedDeclaration": 301,
                           "src": "256:19:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_address_$dyn_storage_$",
                             "typeString": "mapping(address => address[] storage ref)"
                           }
                         },
-                        "id": 309,
+                        "id": 315,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 307,
+                            "id": 313,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1166,
+                            "referencedDeclaration": 1178,
                             "src": "276:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 308,
+                          "id": 314,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -379,7 +379,7 @@
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 310,
+                      "id": 316,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -393,7 +393,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 312,
+                    "id": 318,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -407,14 +407,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 313,
+                  "id": 319,
                   "nodeType": "ExpressionStatement",
                   "src": "256:48:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 315,
+            "id": 321,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -422,15 +422,15 @@
             "name": "addCrowdsale",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 298,
+              "id": 304,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 297,
+                  "id": 303,
                   "name": "_crowdsale",
                   "nodeType": "VariableDeclaration",
-                  "scope": 315,
+                  "scope": 321,
                   "src": "172:18:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -439,7 +439,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 296,
+                    "id": 302,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "172:7:3",
@@ -456,12 +456,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 299,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "199:0:3"
             },
-            "scope": 338,
+            "scope": 344,
             "src": "150:161:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -469,33 +469,33 @@
           },
           {
             "body": {
-              "id": 323,
+              "id": 329,
               "nodeType": "Block",
               "src": "374:34:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 321,
+                    "id": 327,
                     "name": "crowdsales",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 290,
+                    "referencedDeclaration": 296,
                     "src": "391:10:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 320,
-                  "id": 322,
+                  "functionReturnParameters": 326,
+                  "id": 328,
                   "nodeType": "Return",
                   "src": "384:17:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 324,
+            "id": 330,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -503,22 +503,22 @@
             "name": "getCrowdsales",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 316,
+              "id": 322,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "339:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 320,
+              "id": 326,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 319,
+                  "id": 325,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 324,
+                  "scope": 330,
                   "src": "363:9:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -528,7 +528,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 317,
+                      "id": 323,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "363:7:3",
@@ -537,7 +537,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 318,
+                    "id": 324,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "363:9:3",
@@ -552,7 +552,7 @@
               ],
               "src": "362:11:3"
             },
-            "scope": 338,
+            "scope": 344,
             "src": "317:91:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -560,7 +560,7 @@
           },
           {
             "body": {
-              "id": 336,
+              "id": 342,
               "nodeType": "Block",
               "src": "495:52:3",
               "statements": [
@@ -569,25 +569,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 332,
+                      "id": 338,
                       "name": "crowdsalesByAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 295,
+                      "referencedDeclaration": 301,
                       "src": "512:19:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_address_$dyn_storage_$",
                         "typeString": "mapping(address => address[] storage ref)"
                       }
                     },
-                    "id": 334,
+                    "id": 340,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 333,
+                      "id": 339,
                       "name": "_wallet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 326,
+                      "referencedDeclaration": 332,
                       "src": "532:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -605,15 +605,15 @@
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 331,
-                  "id": 335,
+                  "functionReturnParameters": 337,
+                  "id": 341,
                   "nodeType": "Return",
                   "src": "505:35:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 337,
+            "id": 343,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -621,15 +621,15 @@
             "name": "getCrowdsalesByAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 327,
+              "id": 333,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 326,
+                  "id": 332,
                   "name": "_wallet",
                   "nodeType": "VariableDeclaration",
-                  "scope": 337,
+                  "scope": 343,
                   "src": "446:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -638,7 +638,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 325,
+                    "id": 331,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "446:7:3",
@@ -655,15 +655,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 331,
+              "id": 337,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 330,
+                  "id": 336,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 337,
+                  "scope": 343,
                   "src": "484:9:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -673,7 +673,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 328,
+                      "id": 334,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "484:7:3",
@@ -682,7 +682,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 329,
+                    "id": 335,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "484:9:3",
@@ -697,14 +697,14 @@
               ],
               "src": "483:11:3"
             },
-            "scope": 338,
+            "scope": 344,
             "src": "414:133:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 339,
+        "scope": 345,
         "src": "26:524:3"
       }
     ],
@@ -714,14 +714,14 @@
     "absolutePath": "/Users/GustavoIbarra/Projects/Solidity/SimpleICO/contracts/simpleico.sol",
     "exportedSymbols": {
       "SimpleICO": [
-        338
+        344
       ]
     },
-    "id": 339,
+    "id": 345,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 287,
+        "id": 293,
         "literals": [
           "solidity",
           "^",
@@ -737,19 +737,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 338,
+        "id": 344,
         "linearizedBaseContracts": [
-          338
+          344
         ],
         "name": "SimpleICO",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 290,
+            "id": 296,
             "name": "crowdsales",
             "nodeType": "VariableDeclaration",
-            "scope": 338,
+            "scope": 344,
             "src": "52:27:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -759,7 +759,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 288,
+                "id": 294,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "52:7:3",
@@ -768,7 +768,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 289,
+              "id": 295,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "52:9:3",
@@ -782,10 +782,10 @@
           },
           {
             "constant": false,
-            "id": 295,
+            "id": 301,
             "name": "crowdsalesByAddress",
             "nodeType": "VariableDeclaration",
-            "scope": 338,
+            "scope": 344,
             "src": "86:57:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -794,9 +794,9 @@
               "typeString": "mapping(address => address[])"
             },
             "typeName": {
-              "id": 294,
+              "id": 300,
               "keyType": {
-                "id": 291,
+                "id": 297,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "95:7:3",
@@ -813,7 +813,7 @@
               },
               "valueType": {
                 "baseType": {
-                  "id": 292,
+                  "id": 298,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "106:7:3",
@@ -822,7 +822,7 @@
                     "typeString": "address"
                   }
                 },
-                "id": 293,
+                "id": 299,
                 "length": null,
                 "nodeType": "ArrayTypeName",
                 "src": "106:9:3",
@@ -837,7 +837,7 @@
           },
           {
             "body": {
-              "id": 314,
+              "id": 320,
               "nodeType": "Block",
               "src": "199:112:3",
               "statements": [
@@ -847,11 +847,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 303,
+                        "id": 309,
                         "name": "_crowdsale",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 297,
+                        "referencedDeclaration": 303,
                         "src": "234:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -868,18 +868,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 300,
+                        "id": 306,
                         "name": "crowdsales",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 290,
+                        "referencedDeclaration": 296,
                         "src": "218:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 302,
+                      "id": 308,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -893,7 +893,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 304,
+                    "id": 310,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -907,7 +907,7 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 305,
+                  "id": 311,
                   "nodeType": "ExpressionStatement",
                   "src": "218:27:3"
                 },
@@ -917,11 +917,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 311,
+                        "id": 317,
                         "name": "_crowdsale",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 297,
+                        "referencedDeclaration": 303,
                         "src": "293:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -940,34 +940,34 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 306,
+                          "id": 312,
                           "name": "crowdsalesByAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 295,
+                          "referencedDeclaration": 301,
                           "src": "256:19:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_address_$dyn_storage_$",
                             "typeString": "mapping(address => address[] storage ref)"
                           }
                         },
-                        "id": 309,
+                        "id": 315,
                         "indexExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 307,
+                            "id": 313,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1166,
+                            "referencedDeclaration": 1178,
                             "src": "276:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 308,
+                          "id": 314,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -992,7 +992,7 @@
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 310,
+                      "id": 316,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1006,7 +1006,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 312,
+                    "id": 318,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1020,14 +1020,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 313,
+                  "id": 319,
                   "nodeType": "ExpressionStatement",
                   "src": "256:48:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 315,
+            "id": 321,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1035,15 +1035,15 @@
             "name": "addCrowdsale",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 298,
+              "id": 304,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 297,
+                  "id": 303,
                   "name": "_crowdsale",
                   "nodeType": "VariableDeclaration",
-                  "scope": 315,
+                  "scope": 321,
                   "src": "172:18:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1052,7 +1052,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 296,
+                    "id": 302,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "172:7:3",
@@ -1069,12 +1069,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 299,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "199:0:3"
             },
-            "scope": 338,
+            "scope": 344,
             "src": "150:161:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1082,33 +1082,33 @@
           },
           {
             "body": {
-              "id": 323,
+              "id": 329,
               "nodeType": "Block",
               "src": "374:34:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 321,
+                    "id": 327,
                     "name": "crowdsales",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 290,
+                    "referencedDeclaration": 296,
                     "src": "391:10:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 320,
-                  "id": 322,
+                  "functionReturnParameters": 326,
+                  "id": 328,
                   "nodeType": "Return",
                   "src": "384:17:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 324,
+            "id": 330,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1116,22 +1116,22 @@
             "name": "getCrowdsales",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 316,
+              "id": 322,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "339:2:3"
             },
             "payable": false,
             "returnParameters": {
-              "id": 320,
+              "id": 326,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 319,
+                  "id": 325,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 324,
+                  "scope": 330,
                   "src": "363:9:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1141,7 +1141,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 317,
+                      "id": 323,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "363:7:3",
@@ -1150,7 +1150,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 318,
+                    "id": 324,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "363:9:3",
@@ -1165,7 +1165,7 @@
               ],
               "src": "362:11:3"
             },
-            "scope": 338,
+            "scope": 344,
             "src": "317:91:3",
             "stateMutability": "view",
             "superFunction": null,
@@ -1173,7 +1173,7 @@
           },
           {
             "body": {
-              "id": 336,
+              "id": 342,
               "nodeType": "Block",
               "src": "495:52:3",
               "statements": [
@@ -1182,25 +1182,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 332,
+                      "id": 338,
                       "name": "crowdsalesByAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 295,
+                      "referencedDeclaration": 301,
                       "src": "512:19:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_address_$dyn_storage_$",
                         "typeString": "mapping(address => address[] storage ref)"
                       }
                     },
-                    "id": 334,
+                    "id": 340,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 333,
+                      "id": 339,
                       "name": "_wallet",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 326,
+                      "referencedDeclaration": 332,
                       "src": "532:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1218,15 +1218,15 @@
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 331,
-                  "id": 335,
+                  "functionReturnParameters": 337,
+                  "id": 341,
                   "nodeType": "Return",
                   "src": "505:35:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 337,
+            "id": 343,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1234,15 +1234,15 @@
             "name": "getCrowdsalesByAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 327,
+              "id": 333,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 326,
+                  "id": 332,
                   "name": "_wallet",
                   "nodeType": "VariableDeclaration",
-                  "scope": 337,
+                  "scope": 343,
                   "src": "446:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1251,7 +1251,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 325,
+                    "id": 331,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "446:7:3",
@@ -1268,15 +1268,15 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 331,
+              "id": 337,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 330,
+                  "id": 336,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 337,
+                  "scope": 343,
                   "src": "484:9:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1286,7 +1286,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 328,
+                      "id": 334,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "484:7:3",
@@ -1295,7 +1295,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 329,
+                    "id": 335,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "484:9:3",
@@ -1310,14 +1310,14 @@
               ],
               "src": "483:11:3"
             },
-            "scope": 338,
+            "scope": 344,
             "src": "414:133:3",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 339,
+        "scope": 345,
         "src": "26:524:3"
       }
     ],
@@ -1336,5 +1336,5 @@
     }
   },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-15T15:32:55.846Z"
+  "updatedAt": "2018-06-15T21:29:34.761Z"
 }
