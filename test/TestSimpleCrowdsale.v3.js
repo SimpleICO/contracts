@@ -23,8 +23,8 @@ contract('SimpleCrowdsale', ([wallet, investor]) => {
     const DECIMALS = 18;
     const RATE = 1;
     const TOKEN_SUPPLY = 100;
-    const TOKEN_ETH_PRICE = ether('1');
-    const INVESTMENT = ether('5.75');
+    const TOKEN_ETH_PRICE = ether('0.001');
+    const INVESTMENT = ether('0.1');
 
     async function convertCurrency(currency, to, amount){
         return axios
