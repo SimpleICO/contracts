@@ -47,6 +47,24 @@ contract SimpleCrowdsale is Crowdsale {
     }
 
     /**
+    * @dev Source of tokens. Override this method to modify the way in which the crowdsale ultimately gets and sends its tokens.
+    * @param _beneficiary Address performing the token purchase
+    * @param _tokenAmount Number of tokens to be emitted
+    */
+    function _deliverTokens(address _beneficiary, uint256 _tokenAmount) internal {
+        token.transferFrom(wallet, _beneficiary, _tokenAmount);
+    }
+
+    /**
+    * @dev Executed when a purchase has been validated and is ready to be executed. Not necessarily emits/sends tokens.
+    * @param _beneficiary Address receiving the tokens
+    * @param _tokenAmount Number of tokens to be purchased
+    */
+    function _processPurchase(address _beneficiary, uint256 _tokenAmount) internal {
+        _deliverTokens(_beneficiary, _tokenAmount);
+    }
+
+    /**
        * @dev Transfers back the remainder of the weiAmount against the token price to the beneficiary
        * @param _beneficiary Address performing the token purchase
        * @param _weiAmount Value in wei involved in the purchase
