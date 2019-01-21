@@ -11,11 +11,20 @@ contract SimpleCrowdsale is Crowdsale {
 
     event ProcessedRemainder(uint256 remainder);
 
-    constructor (uint256 _price, uint256 _rate, address _wallet, SimpleToken _token)
-        public Crowdsale(_rate, _wallet, _token) {
-
+    constructor (
+        uint256 _price, 
+        uint256 _rate, 
+        address _wallet, 
+        SimpleToken _token
+    )
+    public 
+    Crowdsale(
+        _rate, 
+        _wallet, 
+        _token
+    ) 
+    {
         price = _price;
-
     }
 
     /**
